@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Método da Bissecção</title>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <h1 class="title has-text-info">Método da Bissecção</h1><br>
+          <!-- <hr class="has-background-info"> -->
+          <div class="">
+            <article class="message">
+              <div class="message-header has-background-info">
+                <p>Instruções de uso</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-body">
+                Use a tabela de simbolos abaixo para realizar os calculos. Utilize parênteses em produtos e divisões para obter o melhor resultado.
+                <br><br>
+                <table class="table table is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Símbolo</th>
+                      <th>Função</th>
+                    </tr>
+                    <tr>
+                      <td>+</td>
+                      <td>Soma</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>Subtração</td>
+                    </tr>
+                    <tr>
+                      <td>+</td>
+                      <td>Multiplicação</td>
+                    </tr>
+                    <tr>
+                      <td>/</td>
+                      <td>Divisão</td>
+                    </tr>
+                    <tr>
+                      <td>**</td>
+                      <td>Potenciação</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </article>
+          </div><br>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Digite a equação</label>
+                <div class="control">
+                  <input class="input info" id="equation" type="text" placeholder="x + (2*x)^2 + (3*x) + 5">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Digite a condição de parada</label>
+                <div class="control">
+                  <input class="input info" id="stop" type="text" placeholder="x + (2*x)^2 + (3*x) + 5">
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label class="label">Digite o primeiro valor do intervalo</label>
+                <div class="control">
+                  <input class="input info" id="firstInterval" type="number" placeholder="ex: 2">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Digite o segundo valor do intervalo</label>
+                <div class="control">
+                  <input class="input  info" id="secondInterval" type="number" placeholder="ex: 2">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="feedback">
+            <div class="notification is-success">
+              <button class="delete"></button>
+              Sucesso
+            </div>
+          </div> -->
+          <!-- <div class="notification is-danger">
+          <button class="delete"></button>
+          Erro
+        </div> -->
+          <button type="button" onclick="btnCalcular()" class="button is-primary is-fullwidth">Calcular<span class="fas fa-calculator"></span></button>
+        </div>
+        <div class="column">
+          <h1 class="title has-text-info">Output</h1><br>
+          <!-- <hr class="has-background-info"> -->
+          <div class="columns">
+            <div class="column">
+              <h5 class=""id="txtResultEquation">Resultado da equação: </h5>
+            </div>
+            <div class="column">
+              <h5 class="" id="txtResultAvg">Resultado da média: </h5>
+            </div>
+          </div>
+          <hr class="has-background-info">
+          <table class="table is-striped">
+            <thead>
+              <tr>
+                <th>-8</th>
+                <th>-7</th>
+                <th>-6</th>
+                <th>-5</th>
+                <th>-4</th>
+                <th>-3</th>
+                <th>-2</th>
+                <th>-1</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+              </tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript" src="js/algebra-0.2.6.min.js"></script>
+  <script type="text/javascript" src="js\metodo_bisseccao.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </body>
+</html>
